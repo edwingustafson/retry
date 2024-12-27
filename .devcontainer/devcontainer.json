@@ -1,0 +1,26 @@
+{
+	"name": "Retry",
+	"image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"runArgs": [
+		"--rm",
+		"--name=retry"
+	],
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "true",
+			"installGradle": "false"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"redhat.java",
+				"redhat.vscode-xml",
+				"vscjava.vscode-java-pack",
+				"vscjava.vscode-spring-boot-dashboard",
+				"vscjava.vscode-spring-initializr"
+			]
+		}
+	}
+}
