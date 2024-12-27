@@ -24,7 +24,7 @@ public class RetryService {
      * @return
      * @throws Exception
      */
-    @Retryable(value = { Exception.class }, maxAttempts = 10, backoff = @org.springframework.retry.annotation.Backoff(delay = 1000, multiplier = 2))
+    @Retryable(value = { Exception.class }, maxAttempts = 10, backoff = @org.springframework.retry.annotation.Backoff(delay = 1_000, multiplier = 2))
     public int retry() throws Exception {
         final var result = random.nextInt(10);
         logger.info(String.format("Result: %d", result));
